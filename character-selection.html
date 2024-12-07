@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Selection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="character-selection">
+    <h1>Select Your Character</h1>
+    <div class="characters">
+      <!-- Character 1 -->
+      <div class="character" onclick="selectCharacter('Monster1')">
+        <img src="monster1.png" alt="Monster 1">
+        <p>Monster 1</p>
+      </div>
+      <!-- Character 2 -->
+      <div class="character" onclick="selectCharacter('Monster2')">
+        <img src="monster2.png" alt="Monster 2">
+        <p>Monster 2</p>
+      </div>
+      <!-- Character 3 -->
+      <div class="character" onclick="selectCharacter('Monster3')">
+        <img src="monster3.png" alt="Monster 3">
+        <p>Monster 3</p>
+      </div>
+    </div>
+    <div class="next-button">
+      <button onclick="startGame()">Start Game</button>
+    </div>
+  </div>
+
+  <script>
+    let selectedCharacter = '';
+
+    // Function to handle character selection
+    function selectCharacter(character) {
+      selectedCharacter = character;
+      alert(`You have selected ${character}`);
+    }
+
+    // Function to start the game and pass character info to game page
+    function startGame() {
+      if (selectedCharacter === '') {
+        alert('Please select a character first!');
+      } else {
+        // Save selected character in localStorage
+        localStorage.setItem('character', selectedCharacter);
+        window.location.href = 'game.html';  // Redirect to game page
+      }
+    }
+  </script>
+</body>
+</html>
