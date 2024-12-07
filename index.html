@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japanese to English Translation Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game">
+    <h1>Japanese to English Translation Game</h1>
+
+    <!-- Character Selection -->
+    <div id="character-selection">
+      <h2>Choose Your Character</h2>
+      <select id="character-select">
+        <option value="happy">Happy Character</option>
+        <option value="cool">Cool Character</option>
+        <option value="champion">Champion Character</option>
+      </select>
+      <div id="character-display">
+        <img id="selected-character" src="https://via.placeholder.com/150/0000FF/808080?text=Happy+Character" alt="Character Image" width="150">
+      </div>
+    </div>
+
+    <!-- Level Selection -->
+    <div id="level-selection">
+      <h2>Select Difficulty Level</h2>
+      <select id="level-select">
+        <option value="1">Level 1 (Easy)</option>
+        <option value="2">Level 2 (Medium)</option>
+        <option value="3">Level 3 (Hard)</option>
+      </select>
+    </div>
+
+    <!-- Translation Input -->
+    <div id="word-display">
+      <p id="word">Press "Start" to Begin</p>
+    </div>
+
+    <textarea id="japanese-input" rows="4" cols="50" placeholder="Type Japanese here..." disabled></textarea><br><br>
+    <button onclick="startGame()" id="start-button">Start Game</button><br><br>
+
+    <!-- Score and Time -->
+    <p>Score: <span id="score">0</span></p>
+    <p>Level: <span id="level">1</span></p>
+    <p>Time Left: <span id="time">30</span> seconds</p>
+
+    <!-- Mission and Monster Defeat Progress -->
+    <div id="monster-progress">
+      <p id="monster-status">Defeat the Monster by Answering 10 Questions Correctly!</p>
+      <img id="monster" src="https://via.placeholder.com/150/FF0000/FFFFFF?text=Monster" alt="Monster Image" width="150">
+      <p>Progress: <span id="correct-answers">0</span>/10 correct answers</p>
+    </div>
+
+    <!-- Game Over -->
+    <div id="game-over" style="display:none;">
+      <h2>Mission Completed!</h2>
+      <p>You have defeated the monster! Final score: <span id="final-score">0</span></p>
+      <button onclick="resetGame()">Play Again</button>
+    </div>
+
+    <!-- Audio files for sound effects -->
+    <audio id="correct-sound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+    <audio id="wrong-sound" src="https://www.soundjay.com/button/beep-09.wav" preload="auto"></audio>
+    <audio id="game-over-sound" src="https://www.soundjay.com/button/press-01.wav" preload="auto"></audio>
+    <audio id="background-music" src="https://www.soundjay.com/button/beep-10.wav" loop autoplay></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
