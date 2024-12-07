@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #4CAF50;
+}
+
+#character-selection, #level-selection {
+  margin: 20px 0;
+}
+
+#word-display p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#japanese-input {
+  font-size: 18px;
+}
+
+button {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#monster-progress {
+  margin-top: 30px;
+}
+
+#monster {
+  margin-top: 10px;
+}
+
+#game-over {
+  background-color: #ffeb3b;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#game-over button {
+  background-color: #ff9800;
+  margin-top: 10px;
+}
+
+#game-over button:hover {
+  background-color: #f57c00;
+}
